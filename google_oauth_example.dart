@@ -1,6 +1,15 @@
 #import('dart:html');
 #import('dart:json');
 #import('uri.dart');
+
+final redirect_uri="http://financeCoding.github.com/google_oauth_example/google_oauth_example.html";
+//final redirect_uri="http://localhost/google_oauth_example.html";
+final client_id="669612457208-voi2e4ecl89vvsbgf9qdbuptcdhv10gl.apps.googleusercontent.com";
+final scope="https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile";
+final state="/profile";
+final response_type="token";
+final auth="https://accounts.google.com/o/oauth2/auth";
+
 dataReceived(MessageEvent e) {
   var data = JSON.parse(e.data);
   print("data received");
@@ -41,7 +50,7 @@ class google_oauth_example {
 
   
   void run() {
-    var LoginUri="https://accounts.google.com/o/oauth2/auth?scope=https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile&state=/profile&redirect_uri=http://localhost/google_oauth_example.html&response_type=token&client_id=669612457208-voi2e4ecl89vvsbgf9qdbuptcdhv10gl.apps.googleusercontent.com";
+    var LoginUri="${auth}?scope=${scope}&state=${state}&redirect_uri=${redirect_uri}&response_type=${response_type}&client_id=${client_id}";
     
     //StringBuffer sb = new StringBuffer();
     

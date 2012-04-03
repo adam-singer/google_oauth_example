@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>google_oauth_example</title>
+  </head>
+  <body>
+  	<script type="text/javascript">
+		function callbackForJsonpApi(s) {
+		  console.log("callbackForJsonpApi");
+		  console.log(s);
+		  window.postMessage(JSON.stringify(s), '*');
+		  //window.postMessage(JSON.stringify(s), 'http://localhost');
+		}
+	</script>
+  
+    <script type="application/dart" src="google_oauth_example.dart"></script>
+    <script src="http://dart.googlecode.com/svn/branches/bleeding_edge/dart/client/dart.js"></script>
+  </body>
+</html>
