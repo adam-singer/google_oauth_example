@@ -4,7 +4,8 @@
 
 final redirect_uri="http://financeCoding.github.com/google_oauth_example/google_oauth_example.html";
 //final redirect_uri="http://localhost/google_oauth_example.html";
-final client_id="669612457208-voi2e4ecl89vvsbgf9qdbuptcdhv10gl.apps.googleusercontent.com";
+//final client_id="669612457208-voi2e4ecl89vvsbgf9qdbuptcdhv10gl.apps.googleusercontent.com";
+final client_id="669612457208-k2tqlu6f1ipv9c2kv71vt8m2ktlq3q8b.apps.googleusercontent.com";
 final scope="https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile";
 final state="/profile";
 final response_type="token";
